@@ -538,7 +538,7 @@ vertical-slider-component .slider-button--prev:not([disabled]):hover .icon {
 
 step-5
 
-go to globel.js and paste this code
+go to globel.js and paste this code 
 
  class VerticalSliderComponent extends HTMLElement {
   constructor() {
