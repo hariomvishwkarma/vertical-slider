@@ -70,19 +70,11 @@ go to main product.liquid below media gallery
                 {%- endunless -%}
               {%- endfor -%}
             </ul>
-
-
-
-
-
-
-            
-      
-            <div class="slider-buttons no-js-hidden">
+        <div class="slider-buttons no-js-hidden">
               <button type="button" class="slider-button button--prev" name="previous" aria-label="Slide left"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-</path></svg>
-</button>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+              </path></svg>
+              </button>
               <div class="slider-counter caption">
                 <span class="slider-counter--current">1</span>
                 <span aria-hidden="true"> / </span>
@@ -90,13 +82,19 @@ go to main product.liquid below media gallery
                 <span class="slider-counter--total" data-total="9">9</span>
               </div>
               <button type="button" class="slider-button button--next" name="next" aria-label="Slide right"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-</path></svg>
-</button>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+              </path></svg>
+              </button>
             </div>
           </div>
 
           <div class="slider-wrapper thumbContainer">
+               <div class="button-wrapper">
+              <button type="button" class="slider-button slider-button--prev bigger-slider" name="previous" aria-label="Slide left" disabled="true"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+              </path></svg>
+              </button>
+            </div>
             <ul class="thumbBox slider" role="list">
  {%- if featured_media != null -%}
                 {%- liquid
@@ -188,26 +186,18 @@ go to main product.liquid below media gallery
                 
                   </li>
                 {%- endunless -%}
-              {%- endfor -%}
-            	
-              
-              
+              {%- endfor -%}  
             </ul>
             <div class="button-wrapper">
-              <button type="button" class="slider-button slider-button--prev bigger-slider" name="previous" aria-label="Slide left" disabled="true"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-</path></svg>
-</button>
               <button type="button" class="slider-button slider-button--next bigger-slider" name="next" aria-label="Slide right"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-</path></svg>
-</button>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+              </path></svg>
+              </button>
             </div>
           </div>
        </div>
  </vertical-slider-component>
   {% else %}
-
 =================================================================================================================================
 
 step-2
