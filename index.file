@@ -1,5 +1,5 @@
 Step-1
-below media gallery 
+above media gallery 
 
  {% if section.settings.gallery_layout == 'vertical-thumbnail_slider' %} 
       <vertical-slider-component> 
@@ -80,9 +80,9 @@ below media gallery
       
             <div class="slider-buttons no-js-hidden">
               <button type="button" class="slider-button button--prev" name="previous" aria-label="Slide left"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-</path></svg>
-</button>
+		  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+		</path></svg>
+	      </button>
               <div class="slider-counter caption">
                 <span class="slider-counter--current">1</span>
                 <span aria-hidden="true"> / </span>
@@ -90,15 +90,15 @@ below media gallery
                 <span class="slider-counter--total" data-total="9">9</span>
               </div>
               <button type="button" class="slider-button button--next" name="next" aria-label="Slide right"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-</path></svg>
-</button>
+		  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+		</path></svg>
+	     </button>
             </div>
           </div>
 
           <div class="slider-wrapper thumbContainer">
             <ul class="thumbBox slider" role="list">
- {%- if featured_media != null -%}
+        {%- if featured_media != null -%}
                 {%- liquid
                   capture media_index
                     if featured_media.media_type == 'model'
@@ -195,13 +195,13 @@ below media gallery
             </ul>
             <div class="button-wrapper">
               <button type="button" class="slider-button slider-button--prev bigger-slider" name="previous" aria-label="Slide left" disabled="true"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-</path></svg>
-</button>
+		  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+		</path></svg>
+	      </button>
               <button type="button" class="slider-button slider-button--next bigger-slider" name="next" aria-label="Slide right"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-</path></svg>
-</button>
+		  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+		</path></svg>
+	      </button>
             </div>
           </div>
        </div>
@@ -379,8 +379,7 @@ vertical-slider-component .slider-container::-webkit-scrollbar {
 
 vertical-slider-component .slider-buttons {
   display: none;
-  align-items: center;
-  justify-content: center;
+
 }
 
 vertical-slider-component .slider-button {
@@ -498,6 +497,7 @@ vertical-slider-component .mainBox  > li > modal-opener > div > img {
 vertical-slider-component .hide-modal modal-opener {
   display: none;
 }
+*/
 
 @media only screen and (max-width: 750px) {
  vertical-slider-component .mainContainer .slider-buttons {
@@ -527,11 +527,27 @@ vertical-slider-component  .thumbContainer {
 .product__media-icon, .thumbnail__badge{
               position:relative !important;
 }
-} */
+} 
 vertical-slider-component .slider-button--prev:not([disabled]):hover .icon {
     transform: rotate(180deg) translate(-.15rem) !important;
 }
+.mainContainer {
+    order: 2;
+}
 
+/* @media screen and (max-width: 749px) {
+  .thumbContainer {
+    display: none !important;
+  }
+  vertical-slider-component .slider-buttons {
+  display: block;
+    align-items: center;
+  justify-content: center;
+}
+   vertical-slider-component .mainContainer .slider-buttons {
+    display: flex;
+  }
+} */
 
 
 =================================================================================================================================
