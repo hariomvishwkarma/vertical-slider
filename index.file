@@ -1,5 +1,5 @@
 Step-1
-below media gallery 
+go to main product.liquid below media gallery 
 
  {% if section.settings.gallery_layout == 'vertical-thumbnail_slider' %} 
       <vertical-slider-component> 
