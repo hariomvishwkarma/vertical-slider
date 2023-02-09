@@ -530,6 +530,53 @@ step-5
 
 go to globel.js and paste this code 
 
+find this code 
+  updateMedia() {
+    if (!this.currentVariant) return;
+    if (!this.currentVariant.featured_media) return;
+
+    const mediaGalleries = document.querySelectorAll(`[id^="MediaGallery-${this.dataset.section}"]`);
+    mediaGalleries.forEach(mediaGallery => mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true));
+
+    const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
+    if (!modalContent) return;
+    const newMediaModal = modalContent.querySelector( `[data-media-id="${this.currentVariant.featured_media.id}"]`);
+    modalContent.prepend(newMediaModal);
+  }
+  
+  replace this code---------
+
+    updateMedia() {	
+    if (!this.currentVariant) return;	
+    if (!this.currentVariant.featured_media) return;	
+ const newMedia = document.querySelector(		
+      `[data-media-id="${this.dataset.section}-${this.currentVariant.featured_media.id}"]`		
+    );		
+    console.log(newMedia)		
+    if (!newMedia) return;	
+    const mediaGalleries = document.querySelectorAll(`[id^="MediaGallery-${this.dataset.section}"]`);	
+    mediaGalleries.forEach(mediaGallery => mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true));	
+    const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);	
+    if (!modalContent) return;	
+    const newMediaModal = modalContent.querySelector( `[data-media-id="${this.currentVariant.featured_media.id}"]`);	
+       const parent = newMedia.parentElement;		
+    if (parent.firstChild == newMedia) return;	
+    modalContent.prepend(newMediaModal);	
+        parent.prepend(newMedia);		
+    this.stickyHeader = this.stickyHeader || document.querySelector('sticky-header');		
+    if(this.stickyHeader) {		
+      this.stickyHeader.dispatchEvent(new Event('preventHeaderReveal'));		
+    }		
+    		
+    this.verticalSlider = document.querySelector('vertical-slider-component');		
+    this.verticalSlider.updateThumb(newMedia);		
+   		
+    window.setTimeout(() => { parent.querySelector('li.product__media-item').scrollIntoView({behavior: "smooth"}); });	
+  }
+
+=======================================================================================================================================
+step - 6
+go to global.js file and paste below code at bottom at bottom 
  class VerticalSliderComponent extends HTMLElement {
   constructor() {
     super();
