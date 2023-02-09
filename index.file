@@ -222,6 +222,7 @@ step-4
 
 base.css paste this css
 
+ /* vertical slider */
  vertical-slider-component .slider-container {
   margin: 0 auto;
   overflow: auto;
@@ -369,8 +370,7 @@ vertical-slider-component .slider-container::-webkit-scrollbar {
 
 vertical-slider-component .slider-buttons {
   display: none;
-  align-items: center;
-  justify-content: center;
+
 }
 
 vertical-slider-component .slider-button {
@@ -488,6 +488,7 @@ vertical-slider-component .mainBox  > li > modal-opener > div > img {
 vertical-slider-component .hide-modal modal-opener {
   display: none;
 }
+*/
 
 @media only screen and (max-width: 750px) {
  vertical-slider-component .mainContainer .slider-buttons {
@@ -517,10 +518,28 @@ vertical-slider-component  .thumbContainer {
 .product__media-icon, .thumbnail__badge{
               position:relative !important;
 }
-} */
+} 
 vertical-slider-component .slider-button--prev:not([disabled]):hover .icon {
     transform: rotate(180deg) translate(-.15rem) !important;
 }
+.mainContainer {
+    order: 2;
+}
+
+/* @media screen and (max-width: 749px) {
+  .thumbContainer {
+    display: none !important;
+  }
+  vertical-slider-component .slider-buttons {
+  display: block;
+    align-items: center;
+  justify-content: center;
+}
+   vertical-slider-component .mainContainer .slider-buttons {
+    display: flex;
+  }
+} */
+
 
 
 
